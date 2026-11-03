@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#073b32">
 
+  <!-- ========================================================== -->
+  <!-- COLOQUE SEU CÓDIGO DO GOOGLE TAG MANAGER / GOOGLE ADS AQUI -->
+  <!-- ========================================================== -->
+  <!-- Exemplo: Cole o script do GTM abaixo -->
+  
+  <!-- Fim do código do Google -->
+
   <!-- SEO Básica -->
   <title>Imunizan | Controle de Pragas e Dedetização no Rio de Janeiro</title>
   <meta name="description" content="Imunizan Dedetizadora: dedetização residencial, controle de cupins, ratos, baratas, formigas, pulgas e carrapatos no município do Rio de Janeiro. Solicite um orçamento rápido.">
@@ -13,7 +20,7 @@
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/alandeschampsofc/imunizan/main/logo_imunizan.png">
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/alandeschampsofc/imunizan/main/logo_imunizan.png">
 
-  <!-- Meta Tags para Redes Sociais e WhatsApp (Open Graph / Facebook / Instagram / LinkedIn) -->
+  <!-- Meta Tags para Redes Sociais e WhatsApp -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Imunizan | Dedetização e Controle de Pragas no Rio de Janeiro">
@@ -45,8 +52,14 @@
     .topbar a { text-decoration:none; }
     header { position:sticky; top:0; z-index:20; background:rgba(255,255,255,.94); backdrop-filter:blur(14px); border-bottom:1px solid rgba(225,233,227,.8); }
     .nav { display:flex; align-items:center; justify-content:space-between; min-height:78px; gap:20px; }
-    .brand { display:flex; align-items:center; gap:11px; text-decoration:none; min-width:0; }
-    .brand-logo { height:48px; width:auto; max-width:180px; object-fit:contain; }
+    
+    /* LOGO E TEXTO NO TOPO */
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; min-width:0; }
+    .brand-logo { height:45px; width:45px; min-width:45px; border-radius:50%; object-fit:cover; background:#fff; padding:2px; border:1px solid var(--line); }
+    .brand-text { display:flex; flex-direction:column; line-height:1.15; }
+    .brand-title { color:var(--green-950); font-size:1rem; font-weight:850; letter-spacing:-0.02em; }
+    .brand-subtitle { color:var(--muted); font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; }
+
     .nav-links { display:flex; align-items:center; gap:25px; }
     .nav-links a { font-size:.91rem; font-weight:700; text-decoration:none; color:#29443d; }
     .nav-links a:hover { color:var(--green-600); }
@@ -57,6 +70,7 @@
     .btn-dark { color:#fff; background:var(--green-900); }
     .btn-outline { color:var(--green-900); border:1px solid #b9cdc2; background:transparent; }
     .menu-toggle { display:none; background:none; border:1px solid var(--line); border-radius:12px; padding:10px 12px; font-size:1.2rem; }
+    
     .hero { overflow:hidden; position:relative; background:var(--green-950); color:#fff; }
     .hero:before { content:""; position:absolute; width:550px; height:550px; border-radius:50%; background:rgba(200,241,105,.09); right:-180px; top:-230px; filter:blur(2px); }
     .hero-grid { position:relative; display:grid; grid-template-columns:1.02fr .98fr; align-items:center; gap:50px; padding:70px 0 76px; }
@@ -79,11 +93,12 @@
     .photo-caption strong { display:block; font-size:1.35rem; line-height:1.2; }
     .photo-caption span { color:#d9e9df; font-size:.9rem; }
     .floating-note { position:absolute; z-index:3; left:-25px; top:40px; padding:15px 18px; border-radius:16px; color:var(--green-950); background:var(--lime); box-shadow:var(--shadow); font-size:.87rem; font-weight:850; }
+    
     .trust-strip { background:#f0f6ee; }
     .trust-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; padding:24px 0; }
     .trust-item { display:flex; align-items:center; gap:14px; color:var(--green-900); font-weight:800; }
     
-    /* QUADRADO / CÍRCULO DOS ÍCONES (FAIXA SUPERIOR E CONTATO) */
+    /* ÍCONES DAS CAIXAS CENTRALIZADOS E PROPORCIONAIS */
     .trust-icon { 
       display:flex; 
       align-items:center; 
@@ -93,14 +108,9 @@
       height:54px; 
       border-radius:16px; 
       background:#dff0d2; 
-      font-size:2rem; 
+      font-size:1.8rem; 
       line-height:1; 
       text-align:center; 
-    }
-    .trust-icon svg, .trust-icon img {
-      width:75%;
-      height:75%;
-      object-fit:contain;
     }
 
     section { padding:86px 0; scroll-margin-top:90px; }
@@ -120,6 +130,7 @@
     .service-body h3 { margin-bottom:8px; color:var(--green-950); font-size:1.18rem; }
     .service-body p { margin-bottom:0; color:var(--muted); font-size:.94rem; }
     .service-link { display:inline-block; margin-top:15px; color:var(--green-600); font-size:.9rem; font-weight:850; text-decoration:none; }
+    
     .about-grid { display:grid; grid-template-columns:.95fr 1.05fr; align-items:center; gap:58px; }
     .about-photo { position:relative; min-height:450px; overflow:hidden; border-radius:28px; background:#e5eee7; }
     .about-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
@@ -127,6 +138,7 @@
     .about-list { display:grid; gap:13px; margin:24px 0 28px; padding:0; list-style:none; }
     .about-list li { display:flex; gap:10px; align-items:flex-start; font-weight:700; }
     .about-list li:before { content:"✓"; display:grid; place-items:center; flex:0 0 23px; height:23px; border-radius:50%; color:var(--green-950); background:var(--lime); font-size:.78rem; font-weight:900; }
+    
     .process { background:var(--green-950); color:#fff; }
     .process .section-head h2 { color:#fff; }
     .process .section-head p { color:#c4d8ce; }
@@ -137,14 +149,13 @@
     .step-number { display:grid; place-items:center; width:43px; height:43px; margin-bottom:18px; border-radius:14px; background:var(--lime); color:var(--green-950); font-weight:900; }
     .step h3 { margin-bottom:8px; font-size:1.12rem; }
     .step p { margin-bottom:0; color:#c4d8ce; font-size:.94rem; }
+    
     .contact { background:#f6f8f4; }
     .contact-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:38px; align-items:start; }
     .contact-intro { padding:20px 0; }
     .contact-intro p { color:var(--muted); }
-    
-    /* AJUSTE NA SEÇÃO DE CONTATO / INFORMAÇÕES */
     .contact-detail { display:flex; align-items:center; gap:16px; margin-top:22px; }
-    .contact-detail .trust-icon { flex:0 0 54px; width:54px; height:54px; font-size:2.2rem; }
+    .contact-detail .trust-icon { flex:0 0 54px; width:54px; height:54px; font-size:2rem; }
     .contact-detail strong { display:block; color:var(--green-950); }
     .contact-detail span { display:block; color:var(--muted); font-size:.92rem; }
     
@@ -162,22 +173,32 @@
     .consent input { width:17px; min-height:17px; margin-top:4px; flex:0 0 17px; }
     .form-card .btn { width:100%; }
     .form-note { margin:12px 0 0 !important; font-size:.78rem !important; }
+    
     .faq-list { max-width:800px; margin:0 auto; }
     details { padding:19px 0; border-bottom:1px solid var(--line); }
     summary { color:var(--green-950); font-weight:850; cursor:pointer; }
     details p { margin:12px 0 0; color:var(--muted); }
+    
     .final-cta { padding:56px 0; color:#fff; background:var(--green-800); }
     .final-cta-inner { display:flex; align-items:center; justify-content:space-between; gap:28px; }
     .final-cta h2 { max-width:650px; margin:0 0 8px; color:#fff; font-size:clamp(1.8rem,3vw,2.6rem); }
     .final-cta p { margin:0; color:#d5e7dd; }
-    footer { padding:28px 0; color:#c2d4cb; background:var(--green-950); font-size:.86rem; }
+    
+    footer { padding:32px 0; color:#c2d4cb; background:var(--green-950); font-size:.86rem; }
     .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
     .footer-links { display:flex; gap:18px; flex-wrap:wrap; }
     .footer-links a { color:#e6f1ea; text-decoration:none; }
-    .footer-logo { height:36px; width:auto; max-width:140px; object-fit:contain; filter:brightness(0) invert(1); }
+    
+    /* LOGO E TEXTO NO RODAPÉ COM FUNDO ADEQUADO */
+    .footer-brand { display:flex; align-items:center; gap:12px; }
+    .footer-logo { height:45px; width:45px; min-width:45px; border-radius:50%; object-fit:cover; background:#fff; padding:2px; border:1px solid rgba(255,255,255,0.2); }
+    .footer-brand-text { display:flex; flex-direction:column; line-height:1.15; }
+    .footer-brand-title { color:#fff; font-size:1rem; font-weight:850; }
+    .footer-brand-subtitle { color:#c2d4cb; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; }
+
     .whatsapp-float { position:fixed; z-index:50; right:20px; bottom:20px; display:flex; align-items:center; gap:10px; padding:13px 18px; border-radius:999px; color:#fff; background:#16a765; box-shadow:0 10px 28px rgba(0,0,0,.22); text-decoration:none; font-weight:850; }
     .whatsapp-float svg { width:23px; height:23px; fill:currentColor; }
-    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    
     @media (max-width:900px) {
       .hero-grid { grid-template-columns:1fr .85fr; gap:28px; padding:55px 0; }
       .photo-frame { min-height:380px; }
@@ -218,10 +239,6 @@
       .whatsapp-float { right:14px; bottom:14px; padding:13px 15px; }
       .whatsapp-float .wa-label { display:none; }
     }
-    @media (prefers-reduced-motion:reduce) {
-      html { scroll-behavior:auto; }
-      *,*::before,*::after { transition:none !important; }
-    }
   </style>
 </head>
 <body>
@@ -235,8 +252,11 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#inicio" aria-label="Imunizan - início">
-        <!-- LOGO DA EMPRESA (Menu Superior) -->
-        <img class="brand-logo" src="https://raw.githubusercontent.com/alandeschampsofc/imunizan/main/logo_imunizan.png" alt="Imunizan Controle de Pragas">
+        <img class="brand-logo" src="https://raw.githubusercontent.com/alandeschampsofc/imunizan/main/logo_imunizan.png" alt="Imunizan">
+        <div class="brand-text">
+          <span class="brand-title">IMUNIZAN</span>
+          <span class="brand-subtitle">Dedetizadora</span>
+        </div>
       </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
       <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
@@ -269,7 +289,7 @@
         <div class="hero-visual">
           <div class="floating-note">Cuidado com seu ambiente</div>
           <div class="photo-frame">
-            <!-- IMAGEM 1 — Foto principal do topo/hero. -->
+            <!-- IMAGEM 1 — Foto principal do topo/hero -->
             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="Casa residencial bem cuidada">
             <span class="image-label">IMAGEM 1 · BANNER PRINCIPAL</span>
             <div class="photo-caption"><strong>Proteção começa com prevenção.</strong><span>Fale com nossa equipe e solicite uma avaliação.</span></div>
@@ -296,48 +316,48 @@
         <div class="service-grid">
           <article class="service-card">
             <div class="service-image">
-              <!-- IMAGEM 2 — Card de dedetização residencial. -->
-              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Profissional realizando serviço de manutenção em ambiente interno" loading="lazy">
+              <!-- IMAGEM 2 — Dedetização -->
+              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Dedetização residencial" loading="lazy">
               <span class="image-label">IMAGEM 2 · DEDETIZAÇÃO</span>
             </div>
             <div class="service-body"><h3>Dedetização residencial</h3><p>Atendimento para controle de pragas em casas e apartamentos, conforme o tipo de infestação e as características do local.</p><a class="service-link" href="#contato" data-service="Dedetização residencial">Solicitar orçamento →</a></div>
           </article>
           <article class="service-card">
             <div class="service-image">
-              <!-- IMAGEM 3 — Card de cupins/descupinização. -->
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Detalhe de estrutura de madeira em residência" loading="lazy">
+              <!-- IMAGEM 3 — Cupins -->
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Controle de cupins" loading="lazy">
               <span class="image-label">IMAGEM 3 · CUPINS</span>
             </div>
             <div class="service-body"><h3>Controle de cupins</h3><p>Serviço de descupinização para avaliar sinais de cupins e indicar o tratamento apropriado ao problema identificado.</p><a class="service-link" href="#contato" data-service="Controle de cupins / descupinização">Solicitar orçamento →</a></div>
           </article>
           <article class="service-card">
             <div class="service-image">
-              <!-- IMAGEM 4 — Card de ratos/desratização. -->
-              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Área interna limpa de uma residência" loading="lazy">
+              <!-- IMAGEM 4 — Ratos -->
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Controle de ratos" loading="lazy">
               <span class="image-label">IMAGEM 4 · RATOS</span>
             </div>
             <div class="service-body"><h3>Controle de ratos</h3><p>Orientação e serviço de desratização para lidar com sinais de roedores e reduzir riscos de novas ocorrências.</p><a class="service-link" href="#contato" data-service="Controle de ratos / desratização">Solicitar orçamento →</a></div>
           </article>
           <article class="service-card">
             <div class="service-image">
-              <!-- IMAGEM 5 — Card de baratas e formigas. -->
-              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Cozinha residencial limpa" loading="lazy">
+              <!-- IMAGEM 5 — Baratas e formigas -->
+              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Baratas e formigas" loading="lazy">
               <span class="image-label">IMAGEM 5 · BARATAS E FORMIGAS</span>
             </div>
             <div class="service-body"><h3>Baratas e formigas</h3><p>Controle de insetos rasteiros em ambientes residenciais, com orientação conforme as condições do imóvel.</p><a class="service-link" href="#contato" data-service="Controle de baratas e formigas">Solicitar orçamento →</a></div>
           </article>
           <article class="service-card">
             <div class="service-image">
-              <!-- IMAGEM 6 — Card de pulgas. -->
-              <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=900&q=80" alt="Cachorro de estimação em ambiente doméstico" loading="lazy">
+              <!-- IMAGEM 6 — Pulgas -->
+              <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=900&q=80" alt="Controle de pulgas" loading="lazy">
               <span class="image-label">IMAGEM 6 · PULGAS</span>
             </div>
             <div class="service-body"><h3>Controle de pulgas</h3><p>Avaliação do ambiente para controle de pulgas e orientações preventivas. O tratamento de animais deve ser realizado por médico-veterinário.</p><a class="service-link" href="#contato" data-service="Controle de pulgas">Solicitar orçamento →</a></div>
           </article>
           <article class="service-card">
             <div class="service-image">
-              <!-- IMAGEM 7 — Card de carrapatos. -->
-              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=900&q=80" alt="Cão de estimação em ambiente externo" loading="lazy">
+              <!-- IMAGEM 7 — Carrapatos -->
+              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=900&q=80" alt="Controle de carrapatos" loading="lazy">
               <span class="image-label">IMAGEM 7 · CARRAPATOS</span>
             </div>
             <div class="service-body"><h3>Controle de carrapatos</h3><p>Orientação para controle ambiental de carrapatos. Para tratamento do animal, procure um profissional veterinário.</p><a class="service-link" href="#contato" data-service="Controle de carrapatos">Solicitar orçamento →</a></div>
@@ -349,8 +369,8 @@
     <section id="sobre">
       <div class="container about-grid">
         <div class="about-photo">
-          <!-- IMAGEM 8 — Foto da seção Sobre. -->
-          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85" alt="Profissional trabalhando em ambiente interno" loading="lazy">
+          <!-- IMAGEM 8 — Sobre -->
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85" alt="Profissional trabalhando" loading="lazy">
           <span class="image-label">IMAGEM 8 · SOBRE A IMUNIZAN</span>
         </div>
         <div class="about-copy">
@@ -442,10 +462,13 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>
-        <!-- LOGO DA EMPRESA (Rodapé) -->
+      <div class="footer-brand">
+        <!-- LOGO E TEXTO NO RODAPÉ -->
         <img class="footer-logo" src="https://raw.githubusercontent.com/alandeschampsofc/imunizan/main/logo_imunizan.png" alt="Imunizan">
-        <br>Controle de pragas · Rio de Janeiro, RJ
+        <div class="footer-brand-text">
+          <span class="footer-brand-title">IMUNIZAN</span>
+          <span class="footer-brand-subtitle">Dedetizadora</span>
+        </div>
       </div>
       <div class="footer-links"><a href="#servicos">Serviços</a><a href="#contato">Solicitar orçamento</a><a href="tel:+5521984451180">(21) 98445-1180</a></div>
       <div>© <span id="year"></span> Imunizan. Todos os direitos reservados.</div>
