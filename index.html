@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b32">
+  <meta name="description" content="Imunizan Dedetizadora: dedetização residencial, controle de cupins, ratos, baratas, formigas, pulgas e carrapatos no município do Rio de Janeiro. Solicite um orçamento.">
+  <title>Imunizan | Controle de Pragas no Rio de Janeiro</title>
+  <style>
+    :root {
+      --green-950:#062c26; --green-900:#073b32; --green-800:#0b5144;
+      --green-600:#16846a; --lime:#c8f169; --ink:#172b27;
+      --muted:#61736d; --cream:#f6f8f4; --white:#fff; --line:#e1e9e3;
+      --shadow:0 18px 50px rgba(6,44,38,.12); --radius:22px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:#fff; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.6; }
+    a { color:inherit; }
+    img { display:block; width:100%; }
+    .container { width:min(1120px, calc(100% - 40px)); margin-inline:auto; }
+    .topbar { background:var(--green-950); color:#e9f4ed; font-size:.86rem; }
+    .topbar-inner { display:flex; justify-content:space-between; gap:12px; padding:9px 0; flex-wrap:wrap; }
+    .topbar a { text-decoration:none; }
+    header { position:sticky; top:0; z-index:20; background:rgba(255,255,255,.94); backdrop-filter:blur(14px); border-bottom:1px solid rgba(225,233,227,.8); }
+    .nav { display:flex; align-items:center; justify-content:space-between; min-height:78px; gap:20px; }
+    .brand { display:flex; align-items:center; gap:11px; text-decoration:none; min-width:0; }
+    .brand-mark { width:44px; height:44px; border-radius:14px; display:grid; place-items:center; color:var(--green-950); background:var(--lime); font-size:1.08rem; font-weight:900; letter-spacing:-.08em; }
+    .brand-name { display:block; color:var(--green-950); font-size:1.12rem; line-height:1.1; font-weight:850; letter-spacing:.02em; }
+    .brand-sub { display:block; margin-top:4px; color:var(--muted); font-size:.68rem; font-weight:750; letter-spacing:.15em; text-transform:uppercase; }
+    .nav-links { display:flex; align-items:center; gap:25px; }
+    .nav-links a { font-size:.91rem; font-weight:700; text-decoration:none; color:#29443d; }
+    .nav-links a:hover { color:var(--green-600); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:50px; padding:13px 20px; border:0; border-radius:999px; font:inherit; font-weight:800; text-decoration:none; cursor:pointer; transition:transform .18s,background .18s; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-primary { color:var(--green-950); background:var(--lime); box-shadow:0 8px 22px rgba(200,241,105,.22); }
+    .btn-primary:hover { background:#d7fb8c; }
+    .btn-dark { color:#fff; background:var(--green-900); }
+    .btn-outline { color:var(--green-900); border:1px solid #b9cdc2; background:transparent; }
+    .menu-toggle { display:none; background:none; border:1px solid var(--line); border-radius:12px; padding:10px 12px; font-size:1.2rem; }
+    .hero { overflow:hidden; position:relative; background:var(--green-950); color:#fff; }
+    .hero:before { content:""; position:absolute; width:550px; height:550px; border-radius:50%; background:rgba(200,241,105,.09); right:-180px; top:-230px; filter:blur(2px); }
+    .hero-grid { position:relative; display:grid; grid-template-columns:1.02fr .98fr; align-items:center; gap:50px; padding:70px 0 76px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; color:var(--lime); font-size:.78rem; font-weight:850; letter-spacing:.14em; text-transform:uppercase; }
+    .eyebrow:before { content:""; width:24px; height:2px; background:var(--lime); }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { max-width:650px; margin:18px 0; font-size:clamp(2.45rem,5vw,4.5rem); line-height:1.04; letter-spacing:-.055em; }
+    h1 span { color:var(--lime); }
+    .hero-copy { max-width:570px; color:#d4e4dc; font-size:1.08rem; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:27px; }
+    .hero .btn-outline { border-color:#54746a; color:#fff; }
+    .hero-points { display:flex; flex-wrap:wrap; gap:16px 22px; margin-top:28px; color:#e6f2eb; font-size:.88rem; }
+    .hero-points span:before { content:"✓"; display:inline-grid; place-items:center; width:20px; height:20px; margin-right:7px; border-radius:50%; color:var(--green-950); background:var(--lime); font-size:.75rem; font-weight:900; }
+    .hero-visual { position:relative; }
+    .photo-frame { position:relative; overflow:hidden; min-height:440px; border:1px solid rgba(255,255,255,.16); border-radius:30px; box-shadow:0 30px 70px rgba(0,0,0,.24); }
+    .photo-frame img { position:absolute; inset:0; height:100%; object-fit:cover; }
+    .photo-frame:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(5,34,28,.04) 30%,rgba(5,34,28,.75)); }
+    .image-label { position:absolute; z-index:2; top:14px; left:14px; padding:6px 10px; color:#fff; background:rgba(4,28,23,.76); border:1px solid rgba(255,255,255,.28); border-radius:8px; font-size:.72rem; font-weight:800; }
+    .photo-caption { position:absolute; z-index:2; bottom:24px; left:24px; right:24px; }
+    .photo-caption strong { display:block; font-size:1.35rem; line-height:1.2; }
+    .photo-caption span { color:#d9e9df; font-size:.9rem; }
+    .floating-note { position:absolute; z-index:3; left:-25px; top:40px; padding:15px 18px; border-radius:16px; color:var(--green-950); background:var(--lime); box-shadow:var(--shadow); font-size:.87rem; font-weight:850; }
+    .trust-strip { background:#f0f6ee; }
+    .trust-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; padding:24px 0; }
+    .trust-item { display:flex; align-items:center; gap:12px; color:var(--green-900); font-weight:800; }
+    .trust-icon { display:grid; place-items:center; flex:0 0 42px; height:42px; border-radius:14px; background:#dff0d2; font-size:1.2rem; }
+    section { padding:86px 0; scroll-margin-top:90px; }
+    .section-head { max-width:700px; margin:0 auto 42px; text-align:center; }
+    .section-head .eyebrow { color:var(--green-600); }
+    .section-head .eyebrow:before { background:var(--green-600); }
+    h2 { margin:14px 0; color:var(--green-950); font-size:clamp(2rem,3.7vw,3rem); line-height:1.12; letter-spacing:-.045em; }
+    .section-head p { margin-bottom:0; color:var(--muted); font-size:1.02rem; }
+    .services { background:var(--cream); }
+    .service-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .service-card { overflow:hidden; background:#fff; border:1px solid var(--line); border-radius:var(--radius); transition:transform .2s,box-shadow .2s; }
+    .service-card:hover { transform:translateY(-5px); box-shadow:var(--shadow); }
+    .service-image { position:relative; height:185px; overflow:hidden; background:#dbe6df; }
+    .service-image img { height:100%; object-fit:cover; transition:transform .35s; }
+    .service-card:hover .service-image img { transform:scale(1.04); }
+    .service-body { padding:23px; }
+    .service-body h3 { margin-bottom:8px; color:var(--green-950); font-size:1.18rem; }
+    .service-body p { margin-bottom:0; color:var(--muted); font-size:.94rem; }
+    .service-link { display:inline-block; margin-top:15px; color:var(--green-600); font-size:.9rem; font-weight:850; text-decoration:none; }
+    .about-grid { display:grid; grid-template-columns:.95fr 1.05fr; align-items:center; gap:58px; }
+    .about-photo { position:relative; min-height:450px; overflow:hidden; border-radius:28px; background:#e5eee7; }
+    .about-photo img { position:absolute; inset:0; height:100%; object-fit:cover; }
+    .about-copy p { color:var(--muted); }
+    .about-list { display:grid; gap:13px; margin:24px 0 28px; padding:0; list-style:none; }
+    .about-list li { display:flex; gap:10px; align-items:flex-start; font-weight:700; }
+    .about-list li:before { content:"✓"; display:grid; place-items:center; flex:0 0 23px; height:23px; border-radius:50%; color:var(--green-950); background:var(--lime); font-size:.78rem; font-weight:900; }
+    .process { background:var(--green-950); color:#fff; }
+    .process .section-head h2 { color:#fff; }
+    .process .section-head p { color:#c4d8ce; }
+    .process .section-head .eyebrow { color:var(--lime); }
+    .process .section-head .eyebrow:before { background:var(--lime); }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .step { padding:27px; border:1px solid rgba(255,255,255,.16); border-radius:20px; background:rgba(255,255,255,.045); }
+    .step-number { display:grid; place-items:center; width:43px; height:43px; margin-bottom:18px; border-radius:14px; background:var(--lime); color:var(--green-950); font-weight:900; }
+    .step h3 { margin-bottom:8px; font-size:1.12rem; }
+    .step p { margin-bottom:0; color:#c4d8ce; font-size:.94rem; }
+    .contact { background:#f6f8f4; }
+    .contact-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:38px; align-items:start; }
+    .contact-intro { padding:20px 0; }
+    .contact-intro p { color:var(--muted); }
+    .contact-detail { display:flex; align-items:flex-start; gap:13px; margin-top:22px; }
+    .contact-detail .trust-icon { flex:0 0 44px; }
+    .contact-detail strong { display:block; color:var(--green-950); }
+    .contact-detail span { display:block; color:var(--muted); font-size:.92rem; }
+    .form-card { padding:30px; border:1px solid var(--line); border-radius:24px; background:#fff; box-shadow:var(--shadow); }
+    .form-card h3 { margin-bottom:6px; color:var(--green-950); font-size:1.45rem; }
+    .form-card > p { color:var(--muted); font-size:.92rem; }
+    .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .field { display:flex; flex-direction:column; gap:7px; }
+    .field.full { grid-column:1/-1; }
+    label { color:#2d4941; font-size:.86rem; font-weight:800; }
+    input,select,textarea { width:100%; min-height:48px; padding:12px 13px; border:1px solid #d4e0d8; border-radius:11px; background:#fbfdfb; color:var(--ink); font:inherit; font-size:.95rem; }
+    textarea { min-height:100px; resize:vertical; }
+    input:focus,select:focus,textarea:focus { outline:3px solid rgba(22,132,106,.15); border-color:var(--green-600); }
+    .consent { display:flex; gap:10px; align-items:flex-start; margin:17px 0; color:var(--muted); font-size:.82rem; }
+    .consent input { width:17px; min-height:17px; margin-top:4px; flex:0 0 17px; }
+    .form-card .btn { width:100%; }
+    .form-note { margin:12px 0 0 !important; font-size:.78rem !important; }
+    .faq-list { max-width:800px; margin:0 auto; }
+    details { padding:19px 0; border-bottom:1px solid var(--line); }
+    summary { color:var(--green-950); font-weight:850; cursor:pointer; }
+    details p { margin:12px 0 0; color:var(--muted); }
+    .final-cta { padding:56px 0; color:#fff; background:var(--green-800); }
+    .final-cta-inner { display:flex; align-items:center; justify-content:space-between; gap:28px; }
+    .final-cta h2 { max-width:650px; margin:0 0 8px; color:#fff; font-size:clamp(1.8rem,3vw,2.6rem); }
+    .final-cta p { margin:0; color:#d5e7dd; }
+    footer { padding:28px 0; color:#c2d4cb; background:var(--green-950); font-size:.86rem; }
+    .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .footer-links { display:flex; gap:18px; flex-wrap:wrap; }
+    .footer-links a { color:#e6f1ea; text-decoration:none; }
+    .whatsapp-float { position:fixed; z-index:50; right:20px; bottom:20px; display:flex; align-items:center; gap:10px; padding:13px 18px; border-radius:999px; color:#fff; background:#16a765; box-shadow:0 10px 28px rgba(0,0,0,.22); text-decoration:none; font-weight:850; }
+    .whatsapp-float svg { width:23px; height:23px; fill:currentColor; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media (max-width:900px) {
+      .hero-grid { grid-template-columns:1fr  .85fr; gap:28px; padding:55px 0; }
+      .photo-frame { min-height:380px; }
+      .service-grid { grid-template-columns:repeat(2,1fr); }
+      .about-grid { gap:32px; }
+      .nav-links { gap:14px; }
+      .nav-links a { font-size:.84rem; }
+    }
+    @media (max-width:700px) {
+      .container { width:min(100% - 32px,560px); }
+      .topbar-inner { justify-content:center; text-align:center; }
+      .nav { min-height:70px; }
+      .menu-toggle { display:block; }
+      .nav-links { display:none; position:absolute; left:16px; right:16px; top:calc(100% + 6px); padding:18px; border:1px solid var(--line); border-radius:18px; background:#fff; box-shadow:var(--shadow); align-items:stretch; flex-direction:column; gap:16px; }
+      .nav-links.open { display:flex; }
+      .nav-links a { font-size:.96rem; }
+      .nav-links .btn { width:100%; }
+      .hero-grid { grid-template-columns:1fr; padding:48px 0 54px; gap:34px; }
+      h1 { font-size:clamp(2.55rem,12vw,3.8rem); }
+      .hero-copy { font-size:1rem; }
+      .hero-actions .btn { flex:1 1 100%; }
+      .hero-points { gap:12px; flex-direction:column; }
+      .photo-frame { min-height:320px; }
+      .floating-note { left:12px; top:-18px; }
+      .trust-grid { grid-template-columns:1fr; gap:13px; padding:20px 0; }
+      section { padding:64px 0; }
+      .section-head { margin-bottom:30px; text-align:left; }
+      .service-grid { grid-template-columns:1fr; gap:16px; }
+      .service-image { height:210px; }
+      .about-grid,.contact-grid { grid-template-columns:1fr; gap:28px; }
+      .about-photo { min-height:320px; order:2; }
+      .steps { grid-template-columns:1fr; }
+      .form-card { padding:22px; }
+      .form-grid { grid-template-columns:1fr; }
+      .field.full { grid-column:auto; }
+      .final-cta-inner { align-items:flex-start; flex-direction:column; }
+      .final-cta-inner .btn { width:100%; }
+      .whatsapp-float { right:14px; bottom:14px; padding:13px 15px; }
+      .whatsapp-float .wa-label { display:none; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      *,*::before,*::after { transition:none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Controle de pragas residenciais e comerciais</span>
+      <a href="tel:+5521984451180" aria-label="Ligar para Imunizan">(21) 98445-1180</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Imunizan - início">
+        <span class="brand-mark">IM</span>
+        <span><span class="brand-name">IMUNIZAN</span><span class="brand-sub">Controle de pragas</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato">Contato</a>
+        <a class="btn btn-primary" href="#contato">Solicitar orçamento <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Imunizan · Rio de Janeiro</span>
+          <h1>Mais tranquilidade para sua casa. <span>Menos pragas.</span></h1>
+          <p class="hero-copy">Soluções de controle de pragas para proteger seu ambiente. Conte com a Imunizan para avaliar sua necessidade e solicitar um orçamento de forma simples.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contato">Solicitar orçamento <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="https://wa.me/5521984451180?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Imunizan." target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+          </div>
+          <div class="hero-points">
+            <span>Atendimento no Rio de Janeiro</span>
+            <span>Serviços residenciais</span>
+            <span>Orçamento conforme a necessidade</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="floating-note">Cuidado com seu ambiente</div>
+          <div class="photo-frame">
+            <!-- IMAGEM 1 — Foto principal do topo/hero. Troque o valor de src para substituir a imagem. -->
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="Casa residencial bem cuidada">
+            <span class="image-label">IMAGEM 1 · BANNER PRINCIPAL</span>
+            <div class="photo-caption"><strong>Proteção começa com prevenção.</strong><span>Fale com nossa equipe e solicite uma avaliação.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><span class="trust-icon">⌂</span><span>Atendimento residencial</span></div>
+        <div class="trust-item"><span class="trust-icon">✓</span><span>Orientação para cada necessidade</span></div>
+        <div class="trust-item"><span class="trust-icon">✆</span><span>Contato rápido e fácil</span></div>
+      </div>
+    </div>
+
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Nossos serviços</span>
+          <h2>Controle de pragas para cada situação</h2>
+          <p>Conheça os serviços da Imunizan. Entre em contato para explicar o que está acontecendo e solicitar um orçamento adequado ao seu imóvel.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-image">
+              <!-- IMAGEM 2 — Card de dedetização residencial. -->
+              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Profissional realizando serviço de manutenção em ambiente interno" loading="lazy">
+              <span class="image-label">IMAGEM 2 · DEDETIZAÇÃO</span>
+            </div>
+            <div class="service-body"><h3>Dedetização residencial</h3><p>Atendimento para controle de pragas em casas e apartamentos, conforme o tipo de infestação e as características do local.</p><a class="service-link" href="#contato" data-service="Dedetização residencial">Solicitar orçamento →</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-image">
+              <!-- IMAGEM 3 — Card de cupins/descupinização. -->
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Detalhe de estrutura de madeira em residência" loading="lazy">
+              <span class="image-label">IMAGEM 3 · CUPINS</span>
+            </div>
+            <div class="service-body"><h3>Controle de cupins</h3><p>Serviço de descupinização para avaliar sinais de cupins e indicar o tratamento apropriado ao problema identificado.</p><a class="service-link" href="#contato" data-service="Controle de cupins / descupinização">Solicitar orçamento →</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-image">
+              <!-- IMAGEM 4 — Card de ratos/desratização. -->
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Área interna limpa de uma residência" loading="lazy">
+              <span class="image-label">IMAGEM 4 · RATOS</span>
+            </div>
+            <div class="service-body"><h3>Controle de ratos</h3><p>Orientação e serviço de desratização para lidar com sinais de roedores e reduzir riscos de novas ocorrências.</p><a class="service-link" href="#contato" data-service="Controle de ratos / desratização">Solicitar orçamento →</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-image">
+              <!-- IMAGEM 5 — Card de baratas e formigas. -->
+              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Cozinha residencial limpa" loading="lazy">
+              <span class="image-label">IMAGEM 5 · BARATAS E FORMIGAS</span>
+            </div>
+            <div class="service-body"><h3>Baratas e formigas</h3><p>Controle de insetos rasteiros em ambientes residenciais, com orientação conforme as condições do imóvel.</p><a class="service-link" href="#contato" data-service="Controle de baratas e formigas">Solicitar orçamento →</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-image">
+              <!-- IMAGEM 6 — Card de pulgas. -->
+              <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=900&q=80" alt="Cachorro de estimação em ambiente doméstico" loading="lazy">
+              <span class="image-label">IMAGEM 6 · PULGAS</span>
+            </div>
+            <div class="service-body"><h3>Controle de pulgas</h3><p>Avaliação do ambiente para controle de pulgas e orientações preventivas. O tratamento de animais deve ser realizado por médico-veterinário.</p><a class="service-link" href="#contato" data-service="Controle de pulgas">Solicitar orçamento →</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-image">
+              <!-- IMAGEM 7 — Card de carrapatos. -->
+              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=900&q=80" alt="Cão de estimação em ambiente externo" loading="lazy">
+              <span class="image-label">IMAGEM 7 · CARRAPATOS</span>
+            </div>
+            <div class="service-body"><h3>Controle de carrapatos</h3><p>Orientação para controle ambiental de carrapatos. Para tratamento do animal, procure um profissional veterinário.</p><a class="service-link" href="#contato" data-service="Controle de carrapatos">Solicitar orçamento →</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container about-grid">
+        <div class="about-photo">
+          <!-- IMAGEM 8 — Foto da seção Sobre. Ideal: equipe, técnico uniformizado ou equipamento real da empresa. -->
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85" alt="Profissional trabalhando em ambiente interno" loading="lazy">
+          <span class="image-label">IMAGEM 8 · SOBRE A IMUNIZAN</span>
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow" style="color:var(--green-600)">Sobre a Imunizan</span>
+          <h2>Cuidado profissional com seu ambiente</h2>
+          <p>A Imunizan atua com serviços de controle de pragas e busca oferecer um atendimento claro desde o primeiro contato. Cada situação deve ser avaliada considerando o ambiente, a praga identificada e as necessidades do cliente.</p>
+          <p>Nosso objetivo é facilitar o acesso às informações e ajudar você a encontrar o serviço adequado para seu imóvel no município do Rio de Janeiro.</p>
+          <ul class="about-list">
+            <li>Atendimento para diferentes tipos de pragas</li>
+            <li>Orientação sobre preparação e cuidados necessários</li>
+            <li>Solicitação de orçamento simples e rápida</li>
+          </ul>
+          <a class="btn btn-dark" href="#contato">Converse com a Imunizan</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Simples e prático</span>
+          <h2>Como solicitar seu atendimento</h2>
+          <p>Conte o que está acontecendo e nossa equipe poderá orientar os próximos passos.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-number">01</div><h3>Conte o que precisa</h3><p>Informe o tipo de praga, o bairro e um breve resumo da situação.</p></article>
+          <article class="step"><div class="step-number">02</div><h3>Receba o contato</h3><p>A equipe poderá solicitar detalhes adicionais para entender a necessidade do imóvel.</p></article>
+          <article class="step"><div class="step-number">03</div><h3>Solicite seu orçamento</h3><p>Consulte as condições, a disponibilidade de atendimento e as orientações para o serviço.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Fale conosco</span>
+          <h2>Solicite um orçamento</h2>
+          <p>Preencha os dados abaixo. Ao enviar, o WhatsApp será aberto com uma mensagem pronta para você revisar e encaminhar.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-intro">
+            <h3 style="font-size:1.5rem;color:var(--green-950)">Vamos entender sua necessidade?</h3>
+            <p>Informe seus dados e o tipo de serviço desejado. O contato é direcionado para a equipe da Imunizan.</p>
+            <div class="contact-detail"><span class="trust-icon">✆</span><div><strong>Telefone / WhatsApp</strong><span><a href="tel:+5521984451180">(21) 98445-1180</a></span></div></div>
+            <div class="contact-detail"><span class="trust-icon">⌖</span><div><strong>Área de atendimento</strong><span>Município do Rio de Janeiro — RJ</span></div></div>
+            <div class="contact-detail"><span class="trust-icon">◷</span><div><strong>Atendimento</strong><span>Consulte disponibilidade pelo WhatsApp.</span></div></div>
+          </div>
+          <form class="form-card" id="quoteForm">
+            <h3>Peça seu orçamento</h3>
+            <p>Os campos com * são obrigatórios.</p>
+            <div class="form-grid">
+              <div class="field"><label for="name">Nome completo *</label><input id="name" name="name" autocomplete="name" required maxlength="100" placeholder="Seu nome"></div>
+              <div class="field"><label for="phone">Seu telefone *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="(21) 99999-9999"></div>
+              <div class="field"><label for="neighborhood">Bairro *</label><input id="neighborhood" name="neighborhood" required maxlength="100" placeholder="Ex.: Tijuca"></div>
+              <div class="field"><label for="service">Serviço desejado *</label><select id="service" name="service" required><option value="">Selecione um serviço</option><option>Dedetização residencial</option><option>Controle de cupins / descupinização</option><option>Controle de ratos / desratização</option><option>Controle de baratas e formigas</option><option>Controle de pulgas</option><option>Controle de carrapatos</option><option>Não tenho certeza / preciso de orientação</option></select></div>
+              <div class="field full"><label for="details">Conte um pouco sobre o problema</label><textarea id="details" name="details" maxlength="1000" placeholder="Onde você identificou a praga? Há quanto tempo? (opcional)"></textarea></div>
+            </div>
+            <label class="consent"><input type="checkbox" id="privacyConsent" required><span>Concordo que os dados informados sejam utilizados para responder à minha solicitação de orçamento. Evite incluir informações pessoais desnecessárias.</span></label>
+            <button class="btn btn-primary" type="submit">Continuar pelo WhatsApp <span aria-hidden="true">↗</span></button>
+            <p class="form-note">Ao clicar, o WhatsApp será aberto com os dados preenchidos. Você ainda precisará enviar a mensagem no WhatsApp para concluir o contato.</p>
+            <p class="form-note" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Dúvidas frequentes</span>
+          <h2>Antes de solicitar o serviço</h2>
+        </div>
+        <div class="faq-list">
+          <details><summary>Como faço para solicitar um orçamento?</summary><p>Preencha o formulário desta página e continue pelo WhatsApp, ou entre em contato diretamente pelo telefone informado.</p></details>
+          <details><summary>Quais pragas a Imunizan atende?</summary><p>A empresa informa serviços de dedetização residencial, controle de cupins, ratos, baratas, formigas, pulgas e carrapatos. Consulte a equipe sobre a situação específica do seu imóvel.</p></details>
+          <details><summary>O valor do serviço é informado pelo site?</summary><p>Não. O orçamento deve ser solicitado diretamente à empresa, considerando o tipo de praga, o ambiente e as condições do atendimento.</p></details>
+          <details><summary>Como devo preparar o imóvel?</summary><p>As orientações dependem do serviço indicado. Confirme com a equipe quais cuidados devem ser tomados antes e depois do atendimento.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-cta-inner">
+        <div><h2>Precisa de ajuda com pragas no seu imóvel?</h2><p>Fale com a Imunizan e solicite um orçamento.</p></div>
+        <a class="btn btn-primary" href="https://wa.me/5521984451180?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Imunizan." target="_blank" rel="noopener">Chamar no WhatsApp ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><strong style="color:#fff">IMUNIZAN</strong><br>Controle de pragas · Rio de Janeiro, RJ</div>
+      <div class="footer-links"><a href="#servicos">Serviços</a><a href="#contato">Solicitar orçamento</a><a href="tel:+5521984451180">(21) 98445-1180</a></div>
+      <div>© <span id="year"></span> Imunizan. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5521984451180?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20Imunizan." target="_blank" rel="noopener" aria-label="Falar com a Imunizan pelo WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C8.86 3 3.04 8.82 3.04 15.98c0 2.29.6 4.53 1.74 6.51L3 29l6.68-1.75a12.94 12.94 0 0 0 6.34 1.61h.01C23.18 28.86 29 23.04 29 15.88 29 8.73 23.18 3 16.02 3zm0 23.67c-1.98 0-3.92-.53-5.61-1.54l-.4-.24-3.96 1.04 1.06-3.86-.26-.4a10.66 10.66 0 0 1-1.64-5.69c0-5.9 4.8-10.7 10.71-10.7 2.85 0 5.53 1.11 7.54 3.13a10.6 10.6 0 0 1 3.12 7.55c0 5.9-4.8 10.71-10.7 10.71zm5.87-8.02c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.22.32-.84 1.05-1.03 1.27-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.59-.95-.84-1.6-1.88-1.79-2.2-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.54-.73-.55h-.62c-.22 0-.57.08-.86.4-.3.32-1.13 1.1-1.13 2.68s1.16 3.11 1.32 3.33c.16.22 2.28 3.48 5.53 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.54.27-.76.27-1.41.19-1.54-.08-.14-.29-.22-.61-.38z"/></svg>
+    <span class="wa-label">Falar no WhatsApp</span>
+  </a>
+
+  <script>
+    // CONFIGURAÇÃO: número em formato internacional, sem +, espaços ou traços.
+    const WHATSAPP_NUMBER = "5521984451180";
+
+    // OPCIONAL: para salvar leads numa planilha, configure um endpoint seguro (ex.: Google Apps Script publicado como Web App).
+    // Deixe vazio enquanto não configurar. Sem endpoint, os dados NÃO ficam salvos para a empresa se o visitante não enviar a mensagem.
+    const LEAD_ENDPOINT = "";
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+    });
+    navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }));
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.querySelectorAll("[data-service]").forEach(link => link.addEventListener("click", () => {
+      document.getElementById("service").value = link.dataset.service;
+    }));
+
+    const form = document.getElementById("quoteForm");
+    const status = document.getElementById("formStatus");
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const lead = {
+        nome: document.getElementById("name").value.trim(),
+        telefone: document.getElementById("phone").value.trim(),
+        bairro: document.getElementById("neighborhood").value.trim(),
+        servico: document.getElementById("service").value,
+        detalhes: document.getElementById("details").value.trim(),
+        consentimento: document.getElementById("privacyConsent").checked,
+        origem: "Site Imunizan",
+        dataHora: new Date().toISOString()
+      };
+
+      // O salvamento central só funciona depois de configurar e testar um endpoint próprio.
+      if (LEAD_ENDPOINT.trim()) {
+        try {
+          await fetch(LEAD_ENDPOINT, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify(lead)
+          });
+        } catch (error) {
+          // Não bloqueia a abertura do WhatsApp se o salvamento falhar.
+          console.error("Não foi possível enviar o lead ao endpoint configurado.", error);
+        }
+      }
+
+      const message = [
+        "Olá! Gostaria de solicitar um orçamento com a Imunizan.",
+        "",
+        "Nome: " + lead.nome,
+        "Telefone: " + lead.telefone,
+        "Bairro: " + lead.bairro,
+        "Serviço: " + lead.servico,
+        lead.detalhes ? "Detalhes: " + lead.detalhes : ""
+      ].filter(Boolean).join("\n");
+      const waUrl = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+      status.textContent = "O WhatsApp será aberto. Revise os dados e envie a mensagem para concluir o contato.";
+      window.open(waUrl, "_blank", "noopener,noreferrer");
+    });
+  </script>
+</body>
+</html>
